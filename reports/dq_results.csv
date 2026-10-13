@@ -1,0 +1,7 @@
+check,failing_before,failing_after,handling
+null_or_duplicate_order_id,0,0,Dropped null IDs; kept one row per order_id
+delivered_before_purchase,0,0,Delivery timestamp set to NULL (impossible value)
+payment_not_equal_items_plus_freight,303,303,"Flagged (payment_mismatch_flag), rows kept"
+orders_without_customer,0,0,Dropped (cannot be attributed to a customer/state)
+orders_with_multiple_reviews,547,0,Kept latest review per order
+delivered_status_but_no_delivery_date,8,0,"Flagged, excluded from delay metrics"
